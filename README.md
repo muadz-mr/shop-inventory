@@ -21,7 +21,7 @@
     ```powershell
     php artisan migrate && npm install
     ```
--   Install Filamen PHP admin package
+-   Install Filament PHP admin package
     ```powershell
     composer require filament/filament
     ```
