@@ -10,6 +10,11 @@ class EditProductCategory extends EditRecord
 {
     protected static string $resource = ProductCategoryResource::class;
 
+    protected function getSavedNotificationMessage(): ?string
+    {
+        return 'Product category updated';
+    }
+
     protected function getActions(): array
     {
         return [

@@ -18,7 +18,11 @@ class ProductCategoryResource extends Resource
 {
     protected static ?string $model = ProductCategory::class;
 
+    protected static ?string $navigationGroup = 'System Management';
+
     protected static ?string $navigationIcon = 'heroicon-o-collection';
+
+    protected static ?int $navigationSort = 2;
 
     public static function form(Form $form): Form
     {
@@ -29,7 +33,7 @@ class ProductCategoryResource extends Resource
                     ->autocomplete('off')
                     ->reactive()
                     ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
-                    Forms\Components\TextInput::make('slug')
+                Forms\Components\TextInput::make('slug')
                     ->disabled()
                     ->required()
                     ->autocomplete('off')
