@@ -9,4 +9,9 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateCurrency extends CreateRecord
 {
     protected static string $resource = CurrencyResource::class;
+
+    protected function getCreatedNotificationMessage(): ?string
+    {
+        return 'Currency created';
+    }
 }

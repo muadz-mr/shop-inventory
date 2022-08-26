@@ -10,6 +10,11 @@ class EditCurrency extends EditRecord
 {
     protected static string $resource = CurrencyResource::class;
 
+    protected function getSavedNotificationMessage(): ?string
+    {
+        return 'Currency updated';
+    }
+
     protected function getActions(): array
     {
         return [
