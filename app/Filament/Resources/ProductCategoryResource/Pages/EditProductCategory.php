@@ -15,6 +15,11 @@ class EditProductCategory extends EditRecord
         return 'Product category updated';
     }
 
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
+
     protected function getActions(): array
     {
         return [

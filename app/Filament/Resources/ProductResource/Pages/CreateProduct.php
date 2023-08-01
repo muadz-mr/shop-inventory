@@ -16,4 +16,9 @@ class CreateProduct extends CreateRecord
     {
         return 'Product created';
     }
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
 }

@@ -14,4 +14,9 @@ class CreateCurrency extends CreateRecord
     {
         return 'Currency created';
     }
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
 }

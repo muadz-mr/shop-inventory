@@ -14,9 +14,16 @@ class EditProduct extends EditRecord
 {
     protected static string $resource = ProductResource::class;
 
+    // protected static string $view = 'filament.resources.products.pages.edit-product';
+
     protected function getSavedNotificationMessage(): ?string
     {
         return 'Product updated';
+    }
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
     }
 
     protected function getActions(): array

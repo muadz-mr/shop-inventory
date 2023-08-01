@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Enums\ProductStatus;
 use App\Filament\Resources\ProductResource\Pages;
 use App\Filament\Resources\ProductResource\RelationManagers;
+use App\Filament\Resources\ProductResource\Widgets\StatsOverview;
 use App\Models\Currency;
 use App\Models\Product;
 use App\Models\ProductCategory;
@@ -169,6 +170,13 @@ class ProductResource extends Resource
             'create' => Pages\CreateProduct::route('/create'),
             'view' => Pages\ViewProduct::route('/{record}'),
             'edit' => Pages\EditProduct::route('/{record}/edit'),
+        ];
+    }
+
+    public static function getWidgets(): array
+    {
+        return [
+            StatsOverview::class,
         ];
     }
 }

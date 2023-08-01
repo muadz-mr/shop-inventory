@@ -14,4 +14,9 @@ class CreateProductCategory extends CreateRecord
     {
         return 'Product category created';
     }
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
 }
